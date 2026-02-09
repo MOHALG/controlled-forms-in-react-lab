@@ -68,7 +68,8 @@
   margin-top: 2rem;
   font-size: 1.2rem;
   color: #333;
-}/* ...existing code... */
+}
+
 .bookshelfDiv {
   display: flex;
   flex-wrap: wrap;
@@ -80,18 +81,36 @@
   border-radius: 8px;
   padding: 1rem;
 }
+
+/* ...existing code... */
+.formDiv label {
+  text-align: left;
+  display: block;
+  width: 100%;
+  color: #fff;
+}
 /* ...existing code... */
 
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
 #bookshelf-title {
-  font-size: 2rem;
+  color: #fff;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  color: #ec0606;
+  margin-bottom: 1rem;
 }
-/* ...existing code... */
-.bookshelfDiv .author {
-  font-size: 1.2rem;
-  color: #555;
+
+#add-book-button {
+  background-color: #a661fb;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
-/* ...existing code... */

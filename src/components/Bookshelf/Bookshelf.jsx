@@ -1,4 +1,3 @@
-
 import {useState} from 'react'
 
 const Bookshelf = () => {
@@ -34,38 +33,40 @@ function handleSubmit(event) {
 
 
   return (
-    <div className="bookshelfDiv">
-      <div className="formDiv">
-        <h3>Add a Book</h3>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={newBook.title}
-          onChange={handleInputChange}
-        />
-        <label htmlFor="author">Author:</label>
-        <input
-          type="text"
-          id="author"
-          name="author"
-          value={newBook.author}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Add Book</button>
-        </form>
-        {books.map((book, index) => (
-          <div key={index}>
-            <h4>{book.title}</h4>
-            <p>{book.author}</p>
-          </div>
-      ))}
-
+    <>
+      <div className="bookshelfDiv">
+        <div className="formDiv">
+          <h3>Add a Book</h3>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="title">Title:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              value={newBook.title}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="author">Author:</label>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              value={newBook.author}
+              onChange={handleInputChange}
+            />
+            <button id="add-book-button" type="submit">Add Book</button>
+          </form>
+        </div>
+        <div className="bookCardsDiv">{/* Book cards will display here */}</div>
       </div>
-      <div className="bookCardsDiv">{/* Book cards will display here */}</div>
-    </div>
+
+      {books.map((book, index) => (
+        <div key={index}>
+          <h4>{book.title}</h4>
+          <p>{book.author}</p>
+        </div>
+      ))}
+    </>
   );
 };
 
